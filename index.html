@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhruv Siwch - Toss Win</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=934&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .box {
+      background: rgba(0, 0, 0, 0.7);
+      border: 3px solid orange;
+      border-radius: 20px;
+      padding: 30px 20px;
+      max-width: 350px;
+      box-shadow: 0 0 20px orange;
+    }
+    .logo {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .subscribers {
+      font-size: 22px;
+      margin: 10px 0;
+      color: yellow;
+    }
+    .owner {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #ff8c00;
+    }
+    .join-btn {
+      display: inline-block;
+      background-color: orange;
+      color: #000;
+      padding: 12px 25px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-bottom: 20px;
+    }
+    .timer {
+      font-size: 32px;
+      font-weight: bold;
+      border: 2px solid orange;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+    .offer {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="logo">Dhruv Siwch</div>
+    <div class="subscribers">35,000+ Subscribers</div>
+    <div class="owner">Owner: @DHRUV_SIWCH_CHANNEL</div>
+    <a class="join-btn" href="https://t.me/+Nhu7xoNt6ihkMDI1" target="_blank">Join [Dhruv Siwch] Channel</a>
+    <div class="timer" id="countdown">01:00</div>
+    <div class="offer">Limited Time Offer!</div>
+  </div>
+
+  <script>
+    let duration = 60;
+    const countdown = document.getElementById("countdown");
+    const timer = setInterval(() => {
+      const minutes = Math.floor(duration / 60);
+      const seconds = duration % 60;
+      countdown.textContent = 
+        (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+      if (--duration < 0) clearInterval(timer);
+    }, 1000);
+  </script>
+</body>
+</html>
